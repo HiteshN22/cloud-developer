@@ -14,7 +14,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   // Root Endpoint
 
-  app.get("/filteredimage", async (req, res) => {
+  app.get("/filteredimage", async (req: Request, res: Response) => {
     let { image_url } = req.query;
   
   // Error ==> No url
@@ -52,7 +52,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   
 });
 
-app.get( "/", async ( req, res ) => {
+app.get( "/", async (req: Request, res: Response) => {
   res.send("try GET /filteredimage?image_url={{}}")
 } );
   
